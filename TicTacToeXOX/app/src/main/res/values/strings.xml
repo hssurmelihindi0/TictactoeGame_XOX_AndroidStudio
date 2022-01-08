@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe-XOX</string>
+
+    <string name="Anabaslik">TicTacToe-XOX</string>
+
+    <string name="Girisbutonu">Oyna</string>
+
+    <string name="oyuncuisimbaslik">Oyuncuların İsimlerini Giriniz</string>
+    <string name="birincioyuncu">Oyuncu 1</string>
+    <string name="ikincioyuncu">Oyuncu 2</string>
+    <string name="isimkaydetbutonu">Kaydet</string>
+    <string name="İsimgirme">Oyuncu Adı</string>
+
+    <string name="tekrarOynabutonu">Tekrar Oyna</string>
+    <string name="anaSayfa">Geri Dön</string>
+
+</resources>
