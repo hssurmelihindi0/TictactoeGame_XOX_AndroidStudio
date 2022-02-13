@@ -5,65 +5,68 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OyunEkrani"
+    tools:context=".GameDisplay"
     android:background="#D7CCC8">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="291dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="52dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:id="@+id/playerDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/playAgainButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/green_button"
-            android:onClick="tekrarOynabutonu"
-            android:text="@string/tekrarOynabutonu"
+            android:onClick="playAgainButtonClick"
+            android:text="@string/PlayerAgainButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/homeButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:background="@drawable/red_button"
-            android:onClick="geridonusbutonu"
-            android:text="@string/anaSayfa"
+            android:onClick="homeButtonClick"
+            android:text="@string/HomeButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/playAgainButton"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.hssurmelihindi.tic_tac_toe_xox.TictactoeTahtasi
-        android:id="@+id/tictactoeTahtasi"
+    <com.hssurmelihindi.tic_tac_toe_xox.TicTacToeBoard
+        android:id="@+id/ticTacToeBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        custom:boardColor="#000000"
-        custom:XColor="#FF0000"
-        custom:OColor="#0000FF"
-        custom:winningColor="#00FF00"/>
+        custom:boardColor="#FF0000"
+        custom:XColor="#0000FF"
+        custom:OColor="#00FF00"
+        custom:winningColor="#000000"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

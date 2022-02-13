@@ -13,6 +13,9 @@ class OyunMantigi {
     private TextView oyuncusirasi;
     private String[] oyuncuisimler= {"Oyuncu 1", "Oyuncu 2"};
 
+
+    private int [] kazanantipi = {-1, -1, -1}; // burada 1.-1 sıra için 2. -1 sütun için 3. -1 çizgi için (yani 1. değer satırın değeri 2. değer sütunun değeri 3. değer ise çizilecek çizginin tipi)
+
     private int oyuncu =1;
 
 
@@ -33,12 +36,12 @@ class OyunMantigi {
             oyuntahtasi[row-1][col-1]=oyuncu;
 
             if (oyuncu ==1 ){
-                oyuncusirasi.setText((oyuncuisimler[1] + " sırası"));
+                oyuncusirasi.setText((oyuncuisimler[1] + " adlı oyuncunun sırası"));
 
             }
 
             else {
-                oyuncusirasi.setText((oyuncuisimler[0] + " sırası"));
+                oyuncusirasi.setText((oyuncuisimler[0] + " adlı oyuncunun sırası"));
             }
 
             return true;
@@ -56,29 +59,37 @@ class OyunMantigi {
 
         boolean kazanan = false;
 
+
+        //burası yatay kazananı görmek için
         for (int r=0;r<3;r++){
             if (oyuntahtasi[r][0] == oyuntahtasi[r][1] && oyuntahtasi[r][0]== oyuntahtasi[r][2] && oyuntahtasi[r][0] != 0 ){
 
+                kazanantipi= new int[] {r,0,1};
                 kazanan=true;
+
 
             }
         }
-
+        //burası dikeyde kazananları saptıyor
         for (int c=0;c<3;c++){
             if (oyuntahtasi[0][c]== oyuntahtasi[1][c] && oyuntahtasi[2][c]== oyuntahtasi[0][c] && oyuntahtasi[0][c] != 0 ){
 
+                kazanantipi= new int[] {0,c,2};
                 kazanan=true;
 
             }
         }
 
+        //bu iki if de çaprazda kazananları saptıyor
         if (oyuntahtasi[0][0]== oyuntahtasi[1][1] && oyuntahtasi[0][0]== oyuntahtasi[2][2] && oyuntahtasi[0][0] != 0 ){
-
+            //burası sağdan sola çapraz
+            kazanantipi= new int[] {0,2,3};
             kazanan=true;
 
         }
         if (oyuntahtasi[2][0]== oyuntahtasi[1][1] && oyuntahtasi[2][0]== oyuntahtasi[0][2] && oyuntahtasi[2][0] != 0 ){
-
+            //burası soldan sağa çapraz
+            kazanantipi= new int[] {2,2,4};
             kazanan=true;
 
         }
@@ -98,7 +109,7 @@ class OyunMantigi {
         if (kazanan){
             tekrarOynaBtn.setVisibility(View.VISIBLE);
             geriDonbtn.setVisibility(View.VISIBLE);
-            oyuncusirasi.setText((oyuncuisimler[oyuncu-1] + "Kazandıı!!!!"));
+            oyuncusirasi.setText((oyuncuisimler[oyuncu-1] + " Kazandıı!!!!"));
             return true;
         }
 
@@ -164,5 +175,9 @@ class OyunMantigi {
 
     public int getOyuncu() {
         return oyuncu;
+    }
+
+    public int[] getKazanantipi() {
+        return kazanantipi;
     }
 }

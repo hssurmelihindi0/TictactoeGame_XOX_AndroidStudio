@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToeXOX">
         <activity
+            android:name=".GameDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".HakkindaKismi"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4164274523833428~7874354111" />
+
+        <activity
             android:name=".OyunEkrani"
             android:exported="true" />
         <activity

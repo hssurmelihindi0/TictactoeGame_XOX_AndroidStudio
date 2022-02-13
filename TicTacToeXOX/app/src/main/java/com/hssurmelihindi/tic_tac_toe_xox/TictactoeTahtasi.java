@@ -82,6 +82,11 @@ public class TictactoeTahtasi extends View {
 
         drawMarkers(canvas);
 
+        if (kazanancizgisi){
+            paint.setColor(winningLineColor);
+            drawKazanancizgi(canvas);
+        }
+
 
     }
 
@@ -186,6 +191,46 @@ public class TictactoeTahtasi extends View {
 
 
 
+    }
+
+    private void drawHorizontalLine(Canvas canvas, int row,int col){
+        canvas.drawLine(col, row*cellSize+(float)cellSize/2, cellSize*3,row*cellSize+(float)cellSize/2,paint); //Yatayda kazanan olursa üzerine yatay çizgi çekicek
+
+    }
+
+    private void drawVerticalLine(Canvas canvas , int row , int col){
+
+        canvas.drawLine(col*cellSize+(float)cellSize/2,row, col*cellSize+(float)cellSize/2,cellSize*3,paint);//Dikeyde kazanan olursa dikey çizgi çekmek için
+    }
+
+    private void drawDiagonalLinePos(Canvas canvas ){
+        canvas.drawLine(0,cellSize*3, cellSize*3,0,paint); //Soldan sağa çaprazda kazanan olursa çizgi çekmek için yani (\) şekil olarak bu
+    }
+
+    private void drawDiagonalLineNeg(Canvas canvas ){
+        canvas.drawLine(0,0, cellSize*3,cellSize*3,paint); //Sağdan sola çaprazda kazanan olursa çizgi çekmek için yani (/) şekil olarak bu
+    }
+
+    private void drawKazanancizgi(Canvas canvas){
+        int row = game.getKazanantipi()[0];
+        int col = game.getKazanantipi()[1];
+
+        switch (game.getKazanantipi()[2]) {
+
+            case 1:
+                drawHorizontalLine(canvas, row, col);
+                break;
+            case 2:
+                drawVerticalLine(canvas, row, col );
+                break;
+            case 3:
+                drawDiagonalLineNeg(canvas);
+                break;
+            case 4:
+                drawDiagonalLinePos(canvas);
+                break;
+
+        }
     }
 
     public void setUpGame(Button tekrarOyna, Button Geridon, TextView Oyuncusirasi, String[] isimler){

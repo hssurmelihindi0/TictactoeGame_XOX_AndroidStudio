@@ -3,7 +3,9 @@
 
     <string name="Anabaslik">TicTacToe-XOX</string>
 
-    <string name="Girisbutonu">Oyna</string>
+    <string name="Girisbutonu">İki Oyunculu Oyna</string>
+    <string name="PvPbutonu">Tek Oyunculu Oyna</string>
+    <string name="Hakkindabutonu">Hakkında</string>
 
     <string name="oyuncuisimbaslik">Oyuncuların İsimlerini Giriniz</string>
     <string name="birincioyuncu">Oyuncu 1</string>
@@ -13,5 +15,17 @@
 
     <string name="tekrarOynabutonu">Tekrar Oyna</string>
     <string name="anaSayfa">Geri Dön</string>
+
+
+    <string name="PlayerSetupTitle">İsminizi Giriniz</string>
+    <string name="Label1">Oyuncunun İsmi</string>
+    <string name="SubmitButton">İsmi Kaydet</string>
+    <string name="NameHint">İsim</string>
+
+
+    //ai için tasarladığım oyun ekranının buton stringleri
+    <string name="PlayerAgainButton">Tekrar Oyna</string>
+    <string name="HomeButton">Anasayfa Geri Dön</string>
+
 
 </resources>

@@ -6,14 +6,20 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3287037037037037" />
         <entry key="app/src/main/res/drawable/green_button.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/drawable/hakkindabut.xml" value="0.26944444444444443" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3287037037037037" />
         <entry key="app/src/main/res/drawable/oyuncu_isimler.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/drawable/red_button.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/game_display.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/hakkinda_kismi.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/oyun_ekrani.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/oyun_ekrani2.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/oyun_sayfasi_ai2.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/oyunsayfasi1.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/layout/player_setup.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19270833333333334" />
       </map>
     </option>
   </component>
